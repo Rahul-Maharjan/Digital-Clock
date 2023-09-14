@@ -5,7 +5,8 @@ let sec = document.getElementById("Sec")
 
 setInterval(() => {
     let currentTime = new Date();
-    hour.innerHTML = currentTime.getHours();
+    let hour24 = currentTime.getHours();
+    hour.innerHTML = hour24 % 12;
     mins.innerHTML = currentTime.getMinutes();
     sec.innerHTML = currentTime.getSeconds();
 }, 1000)
